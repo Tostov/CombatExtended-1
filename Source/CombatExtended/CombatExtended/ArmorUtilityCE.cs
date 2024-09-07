@@ -58,7 +58,7 @@ namespace CombatExtended
 
             var dinfo = new DamageInfo(originalDinfo);
             var dmgAmount = dinfo.Amount;
-            var penAmount = originalDinfo.ArmorPenetrationInt; //GetPenetrationValue(originalDinfo);
+            var penAmount = dinfo.ArmorPenetrationInt; //GetPenetrationValue(originalDinfo);
             var involveArmor = dinfo.Def.harmAllLayersUntilOutside || hitPart.depth == BodyPartDepth.Outside;
             bool isAmbientDamage = dinfo.IsAmbientDamage();
 
@@ -419,7 +419,7 @@ namespace CombatExtended
         /// <param name="pawn">The damaged pawn</param>
         /// <param name="part">The body part affected</param>
         /// <returns>The post-armor damage ranging from 0 to the original amount</returns>
-        private static float GetAmbientPostArmorDamage(float dmgAmount,float penAmount, StatDef armorRatingStat, Pawn pawn, BodyPartRecord part)
+        private static float GetAmbientPostArmorDamage(float dmgAmount, float penAmount, StatDef armorRatingStat, Pawn pawn, BodyPartRecord part)
         {
             var dmgMult = 1f + penAmount;
             if (part.IsInGroup(CE_BodyPartGroupDefOf.CoveredByNaturalArmor))
