@@ -449,7 +449,7 @@ namespace CombatExtended
             }
             if (dmgMult > 1)
             {
-                dmgMult = 1;
+                dmgMult = 1f;
             }
             var deflectionComp = pawn.TryGetComp<Comp_BurnDamageCalc>();
             if (deflectionComp != null)
