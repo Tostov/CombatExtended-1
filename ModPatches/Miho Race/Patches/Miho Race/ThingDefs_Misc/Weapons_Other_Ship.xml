@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- ========== Common to all Defensive Turrets ========== -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[@Name="Miho_ShipCannon"]/thingClass </xpath>
+		<value>
+			<thingClass>CombatExtended.Building_TurretGunCE</thingClass>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Miho_Turret_ShipGun"]/statBases</xpath>
+		<value>
+			<AimingAccuracy>0.5</AimingAccuracy>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Miho_Turret_ShipGun"]/comps</xpath>
+		<value>
+			<li Class="CombatExtended.CompProperties_FireArc">
+				<spanRange>10~135</spanRange>
+				<maxSpanDeviation>135</maxSpanDeviation>
+			</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[defName="Miho_Turret_ShipGun"]/comps/li[@Class="CompProperties_Refuelable"]</xpath>
+	</Operation>
+	
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/ThingDef[defName="Miho_Turret_ShipGun"]</xpath>
+		<value>
+			<li Class="CombatExtended.NonSnapTurretExtension">
+				<speed>0.4</speed>
+				<angleWeightMultiplier>2</angleWeightMultiplier>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- ========== Autocannon ========== -->
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Miho_BuildingWeapon_ShipGun</defName>
+		<statBases>
+			<SightsEfficiency>2.24</SightsEfficiency>
+			<ShotSpread>0.07</ShotSpread>
+			<SwayFactor>1.98</SwayFactor>
+			<Bulk>26.50</Bulk>
+			<RangedWeapon_Cooldown>0.50</RangedWeapon_Cooldown>
+		</statBases>
+		<Properties>
+			<recoilAmount>1.48</recoilAmount>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_47x398mmR_AP</defaultProjectile>
+			<warmupTime>2.1</warmupTime>
+			<burstShotCount>3</burstShotCount>
+			<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+			<range>86</range>
+			<soundCast>Miho_KineticCannon</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>20</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</Properties>
+		<AmmoUser>
+			<magazineSize>36</magazineSize>
+			<reloadTime>12.8</reloadTime>
+			<ammoSet>AmmoSet_47x398mmR</ammoSet>
+		</AmmoUser>
+		<FireModes>
+			<aiAimMode>AimedShot</aiAimMode>
+			<aimedBurstShotCount>2</aimedBurstShotCount>
+		</FireModes>
+		<weaponTags>
+			<li>NoSwitch</li>
+			<li>TurretGun</li>
+		</weaponTags>
+	</Operation>
+
+</Patch>

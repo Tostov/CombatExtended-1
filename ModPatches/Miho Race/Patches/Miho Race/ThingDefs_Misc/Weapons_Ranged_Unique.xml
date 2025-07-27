@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- ========== Rifle Old =========== -->
+
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Miho_Weapon_RifleOld_Unique</defName>
+		<statBases>
+			<RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+			<SightsEfficiency>2.48</SightsEfficiency>
+			<ShotSpread>0.05</ShotSpread>
+			<SwayFactor>2.48</SwayFactor>
+			<Bulk>16.5</Bulk>
+			<Mass>7.5</Mass>
+		</statBases>
+		<Properties>
+			<recoilAmount>3.28</recoilAmount>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_132x92mmSRTuF_Miho</defaultProjectile>
+			<warmupTime>3</warmupTime>
+			<range>86</range>
+			<soundCast>Miho_KineticRifleBolt</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+		</Properties>
+		<AmmoUser>
+			<magazineSize>5</magazineSize>
+			<reloadTime>4.5</reloadTime>
+			<ammoSet>AmmoSet_132x92mmSRTuF</ammoSet>
+		</AmmoUser>
+		<FireModes>
+			<aiUseBurstMode>FALSE</aiUseBurstMode>
+			<aiAimMode>AimedShot</aiAimMode>
+		</FireModes>
+	</Operation>
+	
+</Patch>
