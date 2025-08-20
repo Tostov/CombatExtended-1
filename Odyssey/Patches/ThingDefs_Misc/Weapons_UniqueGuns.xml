@@ -14,7 +14,6 @@
 				<aiUseBurstMode>FALSE</aiUseBurstMode>
 				<aiAimMode>Snapshot</aiAimMode>
 			</li>
-			<li Class="CombatExtended.CompProperties_UnderBarrel"/>
 		</value>
 	</Operation>
 
@@ -30,7 +29,6 @@
 			<li Class="CombatExtended.CompProperties_FireModes">
 				<aiAimMode>AimedShot</aiAimMode>
 			</li>
-			<li Class="CombatExtended.CompProperties_UnderBarrel"/>
 		</value>
 	</Operation>
 
@@ -46,7 +44,6 @@
 			<li Class="CombatExtended.CompProperties_FireModes">
 				<aiAimMode>Snapshot</aiAimMode>
 			</li>
-			<li Class="CombatExtended.CompProperties_UnderBarrel"/>
 		</value>
 	</Operation>
 
@@ -64,7 +61,6 @@
 				<aiUseBurstMode>FALSE</aiUseBurstMode>
 				<aiAimMode>SuppressFire</aiAimMode>
 			</li>
-			<li Class="CombatExtended.CompProperties_UnderBarrel"/>
 		</value>
 	</Operation>
 	
@@ -82,7 +78,6 @@
 				<aiUseBurstMode>FALSE</aiUseBurstMode>
 				<aiAimMode>Snapshot</aiAimMode>
 			</li>
-			<li Class="CombatExtended.CompProperties_UnderBarrel"/>
 		</value>
 	</Operation>
 
@@ -100,7 +95,6 @@
 				<aiUseBurstMode>TRUE</aiUseBurstMode>
 				<aiAimMode>AimedShot</aiAimMode>
 			</li>
-			<li Class="CombatExtended.CompProperties_UnderBarrel"/>
 		</value>
 	</Operation>
 
@@ -116,7 +110,6 @@
 			<li Class="CombatExtended.CompProperties_FireModes">
 				<aiAimMode>AimedShot</aiAimMode>
 			</li>
-			<li Class="CombatExtended.CompProperties_UnderBarrel"/>
 		</value>
 	</Operation>
 
@@ -133,7 +126,6 @@
 				<aimedBurstShotCount>25</aimedBurstShotCount>
 				<aiAimMode>Snapshot</aiAimMode>
 			</li>
-			<li Class="CombatExtended.CompProperties_UnderBarrel"/>
 		</value>
 	</Operation>
 
@@ -163,7 +155,6 @@
 				<aiUseBurstMode>TRUE</aiUseBurstMode>
 				<aiAimMode>AimedShot</aiAimMode>
 			</li>
-			<li Class="CombatExtended.CompProperties_UnderBarrel"/>
 		</value>
 	</Operation>
 
@@ -179,7 +170,6 @@
 			<li Class="CombatExtended.CompProperties_FireModes">
 				<aiAimMode>AimedShot</aiAimMode>
 			</li>
-			<li Class="CombatExtended.CompProperties_UnderBarrel"/>
 		</value>
 	</Operation>
 
@@ -212,7 +202,6 @@
 					<aiAimMode>AimedShot</aiAimMode>
 					<aimedBurstShotCount>3</aimedBurstShotCount>
 				</li>
-				<li Class="CombatExtended.CompProperties_UnderBarrel"/>
 			</value>
 		</match>
 	</Operation>

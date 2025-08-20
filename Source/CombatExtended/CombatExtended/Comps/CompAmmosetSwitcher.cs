@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Reflection;
 using RimWorld;
 using Verse;
 using UnityEngine;
@@ -202,7 +201,7 @@ public class CompUnderBarrel : CompRangedGizmoGiver
 
     public override IEnumerable<Gizmo> CompGetGizmosExtra()
     {
-        if (Props.propsUnderBarrel != null && (CompEq.Holder?.Faction == Faction.OfPlayer || DebugSettings.godMode))
+        if (CompEq.Holder?.Faction == Faction.OfPlayer || DebugSettings.godMode)
         {
             if (!usingUnderBarrel)
             {
